@@ -1,0 +1,21 @@
+* { box-sizing: border-box; }
+html, body, #root, .app { height: 100%; margin: 0; }
+body { font: 14px/1.4 -apple-system, "Segoe UI", Arial, sans-serif; color: #1d3557; }
+.app { display: flex; flex-direction: column; }
+header { display: flex; align-items: center; gap: 12px; padding: 8px 14px; border-bottom: 1px solid #e5e5e5; }
+.room { color: #888; }
+.status { font-size: 12px; padding: 2px 8px; border-radius: 10px; background: #eee; }
+.status.online { background: #d8f3dc; color: #1b4332; } .status.reconnecting, .status.offline { background: #ffe5d9; color: #9d0208; }
+.peers { margin-left: auto; display: flex; gap: 4px; }
+.avatar { width: 26px; height: 26px; border-radius: 50%; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; text-transform: uppercase; }
+.toolbar { display: flex; gap: 4px; padding: 6px 10px; border-bottom: 1px solid #e5e5e5; flex-wrap: wrap; align-items: center; }
+.toolbar button { border: 1px solid #ddd; background: #fff; border-radius: 6px; padding: 5px 9px; cursor: pointer; font: inherit; }
+.toolbar button.active { background: #1d3557; color: #fff; border-color: #1d3557; }
+.toolbar button:disabled { opacity: .4; cursor: default; }
+.toolbar .swatch { width: 22px; height: 22px; padding: 0; border-radius: 50%; }
+.toolbar .swatch.active { outline: 2px solid #1d3557; outline-offset: 2px; }
+.sep { width: 1px; height: 22px; background: #ddd; margin: 0 6px; }
+.board { flex: 1; width: 100%; background: #fafafa radial-gradient(#ddd 1px, transparent 1px) 0 0 / 20px 20px; touch-action: none; }
+.board.tool-select { cursor: default; } .board:not(.tool-select) { cursor: crosshair; }
+.sticky-text { font: 14px/1.3 "Comic Sans MS", cursive; overflow: hidden; height: 100%; }
+.cursor { pointer-events: none; transition: transform 60ms linear; }
